@@ -18,6 +18,8 @@ html, body {
     width: 100%;
     height: 100%;
     display: block;
+    /* !!! เพิ่ม z-index: 1; เพื่อให้ canvas อยู่ด้านหลัง !!! */
+    z-index: 1;
 }
 
 .sidebar {
@@ -30,10 +32,42 @@ html, body {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     backdrop-filter: blur(5px);
+    /* !!! เพิ่ม z-index: 10; เพื่อให้เมนูอยู่ด้านหน้า !!! */
+    z-index: 10;
 }
 
 h3 {
     margin-bottom: 15px;
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
+}
+
+.furniture-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.furniture-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.furniture-item:hover {
+    background-color: #e0e0e0;
+    border-color: #007bff;
+}
+
+.item-icon {
+    font-size: 24px;
+    margin-right: 15px;
 }
